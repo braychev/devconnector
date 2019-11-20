@@ -49,7 +49,7 @@ const EditProfile = ({
                 loading || !profile.social ? "" : profile.social.instagram
         });
         // eslint-disable-next-line
-    }, [loading]);
+    }, [loading, getCurrentProfile]);
 
     const {
         company,
@@ -274,7 +274,6 @@ const mapStateToProps = state => ({
     profile: state.profile
 });
 
-export default connect(
-    mapStateToProps,
-    { createProfile, getCurrentProfile }
-)(withRouter(EditProfile));
+export default connect(mapStateToProps, { createProfile, getCurrentProfile })(
+    withRouter(EditProfile)
+);

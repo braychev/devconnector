@@ -16,8 +16,7 @@ const Dashboard = ({
 }) => {
     useEffect(() => {
         getCurrentProfile();
-        // eslint-disable-next-line
-    }, []);
+    }, [getCurrentProfile]);
 
     return loading && profile == null ? (
         <Spinner />
@@ -38,8 +37,8 @@ const Dashboard = ({
                             className="btn btn-danger"
                             onClick={() => deleteAccount()}
                         >
-                            <i className="fas fa-user-minus"></i> Delete My
-                            Account
+                            <i className="fas fa-user-minus"></i>
+                            {"  "} Delete My Account
                         </button>
                     </div>
                 </Fragment>
@@ -69,7 +68,6 @@ const mapStateToProps = state => ({
     profile: state.profile
 });
 
-export default connect(
-    mapStateToProps,
-    { getCurrentProfile, deleteAccount }
-)(Dashboard);
+export default connect(mapStateToProps, { getCurrentProfile, deleteAccount })(
+    Dashboard
+);
