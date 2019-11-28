@@ -92,7 +92,7 @@ export const createProfile = (
     try {
         const config = {
             headers: {
-                "Contet-Type": "application/json"
+                "Content-Type": "application/json"
             }
         };
 
