@@ -45,6 +45,7 @@ export default function(state = initialState, action) {
         case REPO_ERROR:
             return {
                 ...state,
+                profile: null,
                 error: payload,
                 loading: false
             };

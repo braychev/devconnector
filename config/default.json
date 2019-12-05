@@ -1,0 +1,6 @@
+{
+    "mongoURI": "mongodb+srv://aurassai:YruasMyl79zg5Oef@devconnector-tzmgs.mongodb.net/test?retryWrites=true&w=majority",
+    "jwtSecret": "mysupersecrettoken",
+    "githubClientId": "160b093d99b84d7a04ca",
+    "githubSecret": "790c5cec65e2bda3d7f0a584b8a1e3462723b331"
+}
